@@ -56,3 +56,12 @@ else:
   echo "Não é um objeto";
 endif;
 echo "<br><br>";
+
+// Especiais
+
+$cidade = NULL;
+var_dump($cidade);
+
+// ASPAS SIMPLES - Literal
+// ASPAS DUPLAS - Interpretativas
+// CONCATENAÇÃO - Usa-se o ponto
