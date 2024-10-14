@@ -58,3 +58,5 @@ foreach($times["paulistas"] as $indice => $valor) {
 foreach($times["cariocas"] as $indice => $valor) {
   echo $indice." - ".$valor."<br>";
 }
+echo "<hr>";
+// ACESSE AS FUNÇÕES DE ARRAY PARA SABER MAIS
