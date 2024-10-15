@@ -15,6 +15,9 @@
       if(empty($login) || empty($senha)) {
         $erros[] = "<li> o campo login/senha precisa ser preenchido.</li>";
       } else {
+
+        // 105 OR 1=1
+        // 1; DROP TABLE teste
         // VERIFICAÇÃO DE LOGIN NO BD
         $sql = "SELECT * FROM usuarios WHERE login = '$login'";
         $resultado = mysqli_query($connect, $sql);
