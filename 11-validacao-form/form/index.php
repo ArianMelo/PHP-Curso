@@ -6,10 +6,6 @@
     // ARRAY DE ERROS
     $erros = array();
 
-    if(!$idade = filter_input(INPUT_POST, 'idade', FILTER_VALIDATE_INT)):
-      echo "Idade inválida!<br>";
-    endif;
-
     if(!$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)):
       echo "Email inválido!<br>";
     endif;
