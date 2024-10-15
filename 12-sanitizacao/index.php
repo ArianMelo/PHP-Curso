@@ -7,6 +7,31 @@
     $erros = array();
 
     // SANITIZAÇÃO
+    $nome = filter_input(INPUT_POST, 'nome',FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $idade = filter_input(INPUT_POST, 'idade',FILTER_SANITIZE_NUMBER_INT);
+    if(!filter_var($idade, FILTER_VALIDATE_INT)):
+      $erros[] = "Idade inválida";
+    endif;
+
+    $email = filter_input(INPUT_POST, 'email',FILTER_SANITIZE_EMAIL);
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)):
+      $erros[] = "Email inválida";
+    endif;
+
+    $url = filter_input(INPUT_POST, 'url',FILTER_SANITIZE_EMAIL);
+    if(!filter_var($url, FILTER_VALIDATE_EMAIL)):
+      $erros[] = "URL inválida";
+    endif;
+
+    if(!empty($erros)):
+      foreach($erros as $erro):
+        echo "<li> $erro </li>";
+      endforeach;
+    else:
+      echo "Parabéns, seus dados estão corretos";
+    endif;
+    
   endif;
   ?>
 
